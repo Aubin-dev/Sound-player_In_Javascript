@@ -14,13 +14,136 @@ body {
 
 .main {
     position: relative;
-    height: 80%;
-    width: 80%;
+    height: 100%;
+    width: 80%;                                 
     display: flex;
     align-items: center;
     justify-content: center;
     background: linear-gradient(to right, #5D6D7E, #566573);
 }
+
+audio{
+    position: absolute;
+    top: 0%;
+    z-index: 10000;
+}
+
+
+.titre{
+    width:300px;
+    height:100px;
+    position:absolute;
+    color:white;
+    top:40px;
+    left:60px;
+    z-index:1000;
+}
+.titre1{
+    top:0;
+    left:75%;
+    color:white;
+    text-align: center;
+    font-size:50px;
+    width:650px;
+    height:100%;
+    position:absolute;
+    background-color:rgb(63, 43, 36);
+    z-index:1000;
+}
+.input {
+    position: absolute;
+    bottom: 30%;
+    left: 25%;
+    width:20% ;
+    -webkit-appearance: none;
+    outline: none;
+    height: 3px;
+    margin: 0 15px;
+    z-index: 1000;
+}
+.p{
+    position: absolute;
+    right: 130px;top:0;
+    font-size: 50px;
+    border-radius: 5px;
+    color:white;
+    cursor: pointer;
+    z-index: 1009;
+}
+
+button{
+    position: relative;
+    margin: 30px;
+    top: 30%;
+    left: -55%;
+    font-size: 30px;
+    border: none;
+    height: 100px;
+    width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    transition: 0.5s;
+    background: rgba(245, 245, 245, 0.1);
+    z-index: 1000;
+};
+
+div{
+    width:300px;
+    height:100%;
+
+
+}
+
+.image {
+    position: absolute;
+    height: 550px;
+    width: 30%;
+    top: 20%;
+    left: 20%;
+    border-radius: 5px;
+    background-color: white;
+    box-shadow: 1px 0px 20px 12px rgba(240, 240, 240, 0.2);
+    z-index: 1000;
+
+}
+.image1{
+    position: absolute;
+    height: 550px;
+    width: 30%;
+    top: 20%;
+    left: 20%;
+    border-radius: 5px;
+    background: url(./img/ninho.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 10077;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
 
 .main button {
     padding: 10px 12px;
@@ -136,7 +259,7 @@ input[type='range']::-webkit-slider-thumb {
 .right #title {
     position: absolute;
     top: 60px;
-    left: 50%;
+    left: 60%;
     transform: translateX(-50%);
     text-transform: capitalize;
     color: white;
@@ -227,4 +350,4 @@ input[type='range']::-webkit-slider-thumb {
 
 .right .show_song_no p:nth-child(2) {
     margin: 0 5px;
-}
+} 
