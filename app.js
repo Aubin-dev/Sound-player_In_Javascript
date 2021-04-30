@@ -36,16 +36,16 @@ playBtn.addEventListener('click',()=>{
 });
 
 previous.addEventListener('click', ()=>{
-    
-    ;
+    audio.src=tousLesSons[index_no].son;
     audio.play();
+    playBtn.innerHTML='<i class="fa fa-pause"></i>'
 });
 
 next.addEventListener('click', ()=>{
     audio.src=tousLesSons[index_no +1].son;
     audio.play();
+    playBtn.innerHTML='<i class="fa fa-pause"></i>'
 });
-
 
 
 
@@ -65,6 +65,9 @@ class Sound {
         let p = document.createElement("div");
         let div2 = document.createElement("div");
         let input = document.createElement("input");
+        input.setAttribute("type", "range");
+        input.min='0';
+        input.max='100';
         let imag =document.createElement('div')
 
         titre.textContent='Music';
@@ -93,6 +96,13 @@ class Sound {
 
         div1.style.zIndex=1000;
 
+        p.addEventListener('click', ()=>{
+            for(let i=0; i<tousLesSons.length; i++){
+                div1.textContent=tousLesSons[i].name
+            }
+            
+        })
+
     }
     onload(){
         let audio= document.createElement('audio')
@@ -113,7 +123,6 @@ class Sound {
         playBtn.innerHTML='<i class="fa fa-pause"></i>';
         this.remove()
     };
-
     pause() {
         let audio= document.createElement('audio')
         audio.pause();
@@ -139,3 +148,4 @@ let player = new Sound();
 player.init();
 player.play();
 player.pause();
+

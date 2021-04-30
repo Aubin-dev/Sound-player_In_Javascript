@@ -57,10 +57,20 @@ audio{
     width:20% ;
     -webkit-appearance: none;
     outline: none;
-    height: 3px;
+    height: 4px;
+
     margin: 0 15px;
     z-index: 1000;
 }
+.input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    background: #FF8A65;
+    cursor: pointer;
+}
+
 .p{
     position: absolute;
     right: 130px;top:0;
@@ -69,6 +79,7 @@ audio{
     color:white;
     cursor: pointer;
     z-index: 1009;
+    overflow: hidden;
 }
 
 button{
